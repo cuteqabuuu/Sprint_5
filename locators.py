@@ -10,6 +10,7 @@ class MainPage:
     sauces_tab = (By.XPATH, './/span[text()="Соусы"]/parent::*')
     fillings_tab = (By.XPATH, './/span[text()="Начинки"]/parent::*')
     active_tab_class = 'tab_tab_type_current__2BEPc'
+    constructor_title = (By.XPATH, '//h1[text()="Соберите бургер"]')
 
 
 class RegistrationPage:
@@ -19,6 +20,16 @@ class RegistrationPage:
     registrate_button = (By.XPATH, './/button[text()="Зарегистрироваться"]')
     login_text_with_href = (By.CLASS_NAME, 'Auth_link__1fOlj')
     input_error_text = (By.XPATH, './/p[contains(@class, "input__error")]')
+
+    user_exists_error_text = (
+        By.XPATH,
+        './/p[contains(text(), "Такой пользователь уже существует")]'
+    )
+
+    invalid_password_error_text = (
+        By.XPATH,
+        './/p[text()="Некорректный пароль"]'
+    )
 
 
 class LoginPage:
